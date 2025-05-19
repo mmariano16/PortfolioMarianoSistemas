@@ -11,6 +11,7 @@ export default function Skills() {
           <li>PHP, HTML5, CSS3, Sass</li>
           <li>jQuery, Bootstrap</li>
           <li>Integración de APIs y mapas interactivos</li>
+          <li>Docker</li>
           <li>Metodologías ágiles y buenas prácticas de desarrollo</li>
           <li>Traduccion y Edicion de Videos en diferentes Idiomas </li>
         </ul>
