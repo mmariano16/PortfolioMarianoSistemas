@@ -1,0 +1,141 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  
+  .dark & {
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  
+  .logo-primary {
+    color: #2c3e50;
+    
+    .dark & {
+      color: white;
+    }
+  }
+  
+  .logo-secondary {
+    color: #4dabf7;
+    margin-left: 0.3rem;
+  }
+}
+
+.nav {
+  ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .nav-link {
+    position: relative;
+    color: #495057;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    
+    .dark & {
+      color: #e9ecef;
+    }
+    
+    &:hover {
+      color: #2c7be5;
+      
+      .nav-link-underline {
+        width: 100%;
+      }
+    }
+    
+    .nav-link-underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #2c7be5;
+      transition: width 0.3s ease;
+    }
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  
+  .social-link {
+    color: #495057;
+    transition: color 0.3s ease;
+    
+    .dark & {
+      color: #e9ecef;
+    }
+    
+    &:hover {
+      color: #2c7be5;
+    }
+    
+    .social-icon {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: #495057;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    
+    .dark & {
+      color: #e9ecef;
+    }
+    
+    &:hover {
+      color: #2c7be5;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+  
+  .header-content {
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    
+    .logo {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .header-actions {
+    margin-top: 1rem;
+  }
+}

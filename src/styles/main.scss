@@ -1,0 +1,226 @@
+@import './variables';
+@import './animations';
+
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #e3f0ff 0%, #b3d8ff 100%);
+  min-height: 100vh;
+  transition: $transition;
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.header {
+  background: var(--bg-primary);
+  box-shadow: var(--shadow);
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: fadeInDown 1s;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header nav a {
+  margin: 0 1rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.header nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.header nav a:hover::after {
+  width: 100%;
+}
+
+.header__links a {
+  margin-left: 1rem;
+  color: var(--accent-color);
+  transition: color 0.2s;
+}
+
+.header__links a:hover {
+  color: #174ea6;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(120deg, #2c7be5 0%, #174ea6 100%);
+  color: #fff;
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+  animation: fadeIn 1.2s;
+}
+
+.hero__container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero__container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: $border-radius;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #174ea6;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Secciones */
+section {
+  padding: $section-padding;
+  background: var(--bg-secondary);
+  margin-bottom: 2rem;
+  border-radius: $border-radius;
+  box-shadow: var(--shadow);
+  animation: fadeInUp 1s;
+}
+
+h2 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  background: #e3f0ff;
+  color: #174ea6;
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem 0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(44, 123, 229, 0.08);
+  transition: background 0.2s;
+}
+
+.skills-list li:hover {
+  background: #b3d8ff;
+}
+
+/* Testimonios */
+.testimonials .testimonial {
+  background: #fff;
+  border-left: 4px solid var(--accent-color);
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
+  border-radius: $border-radius;
+  box-shadow: var(--shadow);
+  max-width: 700px;
+  animation: fadeIn 1.2s;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.testimonials p {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: #174ea6;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  border-radius: $border-radius $border-radius 0 0;
+  margin-top: 2rem;
+  animation: fadeInUp 1s;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: $breakpoint-md) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .header__container, .hero__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  section {
+    padding: 2rem 0.5rem;
+  }
+}
