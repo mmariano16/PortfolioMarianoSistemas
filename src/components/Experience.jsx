@@ -6,7 +6,7 @@ export default function Experience() {
         <ul>
           <li>
             <strong>Ministerio de Salud - Córdoba</strong> <br />
-            <em>Desarrollador de Sistemas (2000 - Actualidad)</em>
+            <em>Desarrollador de Sistemas y DBA (2000 - Actualidad)</em>
             <ul>
               {/* SISTEMA DE GESTIÓN DE AMBULANCIAS */}
               <li style={{ marginLeft: "2rem" }}>
