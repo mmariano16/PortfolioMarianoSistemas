@@ -1,8 +1,17 @@
+import experienceImg from '../assets/images/Perfil.jpg';
+
 export default function Experience() {
   return (
     <section className="experience" id="experience">
       <div className="container">
-        <h2>Experiencia Laboral</h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+          <img
+            src={experienceImg}
+            alt="Experiencia"
+            style={{ width: '400px', height: '400px', objectFit: 'cover', borderRadius: '8px' }}
+          />
+          <h2 style={{ margin: 0 }}>Experiencia Laboral</h2>
+        </div>
         <ul>
           <li>
             <strong>Ministerio de Salud - Córdoba</strong> <br />
