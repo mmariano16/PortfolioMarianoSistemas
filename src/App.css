@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+.mentions__gallery {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.mentions__img {
+  width: 250px;
+  max-width: 90vw;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 123, 229, 0.15);
+  background: #fff;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+}
+.mentions__img:hover {
+  transform: scale(1.04) rotate(-2deg);
+}

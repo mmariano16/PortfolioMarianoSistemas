@@ -224,3 +224,35 @@ ul {
     padding: 2rem 0.5rem;
   }
 }
+.mentions__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carousel-btn {
+  background: #2c7be5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(44,123,229,0.08);
+}
+.carousel-btn:hover {
+  background: #174ea6;
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; // Ajusta el valor según prefieras
+}
+.contact__content .btn {
+  width: fit-content;
+  align-self: flex-start;
+}

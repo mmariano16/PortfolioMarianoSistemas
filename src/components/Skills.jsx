@@ -12,6 +12,8 @@ export default function Skills() {
           <li>jQuery, Bootstrap</li>
           <li>Integración de APIs y mapas interactivos</li>
           <li>Docker</li>
+          <li>Oracle Forms</li>
+          <li>WordPress</li>
           <li>Metodologías ágiles y buenas prácticas de desarrollo</li>
           <li>Traduccion y Edicion de Videos en diferentes Idiomas </li>
         </ul>

@@ -9,6 +9,7 @@ export default function Header() {
           <a href="#experience">Experiencia</a>
           <a href="#skills">Conocimientos</a>
           <a href="#testimonials">Testimonios</a>
+          <a href="#Estudios">Estudios</a>
           <a href="#contact">Contacto</a>
         </nav>
         <div className="header__links">
