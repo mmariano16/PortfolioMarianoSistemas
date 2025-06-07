@@ -1,16 +1,29 @@
 import experienceImg from '../assets/images/Perfil.jpg';
+import programingVideo from '../assets/images/programar.mp4';
 
 export default function Experience() {
   return (
     <section className="experience" id="experience">
       <div className="container">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '1.5rem' }}>
           <img
             src={experienceImg}
             alt="Experiencia"
-            style={{ width: '400px', height: '400px', objectFit: 'cover', borderRadius: '8px' }}
+            style={{ width: '320px', height: '320px', objectFit: 'cover', borderRadius: '8px' }}
           />
-          <h2 style={{ margin: 0 }}>Experiencia Laboral</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem' }}>
+            <h2 style={{ margin: 0 }}>Experiencia Laboral</h2>
+            <video
+              src={programingVideo}
+              width={400}
+              height={240}
+              controls
+              style={{ borderRadius: '12px', boxShadow: '0 2px 16px rgba(44,123,229,0.15)' }}
+              title="Desarrollar Sistemas"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <ul>
           <li>
