@@ -1,5 +1,5 @@
 import experienceImg from '../assets/images/Perfil.jpg';
-import programingVideo from '../assets/images/programar.mp4';
+import programingVideo from '../assets/images/Programar.mp4';
 
 export default function Experience() {
   return (
