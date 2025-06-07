@@ -16,8 +16,7 @@ export default function Skills() {
           <li>WordPress</li>
           <li>Itop</li>
           <li>Metodologías ágiles y buenas prácticas de desarrollo</li>
-          <li>Traduccion y Edicion de Videos en diferentes Idiomas </li>
-          <li>Itop</li>
+          <li>Traduccion y Edicion de Videos en diferentes Idiomas </li>          
         </ul>
       </div>
     </section>
