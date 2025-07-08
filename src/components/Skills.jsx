@@ -11,6 +11,7 @@ export default function Skills() {
           <li>PHP, HTML5, CSS3, Sass</li>
           <li>jQuery, Bootstrap</li>
           <li>Integración de APIs y mapas interactivos</li>
+           <li>Webhooks</li>
           <li>Docker</li>
           <li>Oracle Forms</li>
           <li>WordPress</li>
