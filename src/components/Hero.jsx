@@ -1,10 +1,14 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="hero">
       <div className="container hero__container">
-        <h2>Analista y Desarrollador de Sistemas</h2>
+        <h2>{t.hero.title}</h2>
         <p>
-          Soy Mariano Molina, con experiencia en sistemas a medida, integración de tecnologías y soluciones para empresas y sector público.
+          {t.hero.subtitle}
         </p>
         <a
           className="btn btn-primary"
@@ -12,7 +16,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Contactar por WhatsApp
+          {t.hero.ctaButton}
         </a>
       </div>
     </section>

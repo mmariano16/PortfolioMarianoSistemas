@@ -1,11 +1,15 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section className="contact" id="contact">
       <div className="container">
         <div className="contact__content">
-          <h2>Contacto</h2>
+          <h2>{t.contact.title}</h2>
           <p>
-            ¿Te gustaría trabajar conmigo o necesitas una solución a medida?
+            {t.contact.question}
           </p>
           <a
             className="btn btn-primary"
@@ -13,10 +17,10 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Escribime por WhatsApp
+            {t.contact.whatsapp}
           </a>
           <p>
-            También podés contactarme por <a href="https://www.linkedin.com/in/mariano-molina-71a1772b" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+            {t.contact.linkedin} <a href="https://www.linkedin.com/in/mariano-molina-71a1772b" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
           </p>
         </div>
       </div>

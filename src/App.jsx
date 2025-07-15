@@ -7,11 +7,12 @@ import Contact from './components/Contact';
 import Mentions from './components/Mentions'; 
 import Estudios from './components/Estudios';
 import Footer from './components/Footer';
+import { LanguageProvider } from './contexts/LanguageContext';
 import './styles/main.scss';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <Hero />
       <Experience />
@@ -21,7 +22,7 @@ function App() {
       <Estudios />
       <Contact />
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }
 

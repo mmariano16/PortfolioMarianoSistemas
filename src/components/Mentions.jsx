@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import mencion1 from '../assets/images/mencion1.png';
 import mencion2 from '../assets/images/mencion2.png';
 import mencion3 from '../assets/images/mencion3.png';
@@ -10,6 +11,7 @@ const images = [
 ];
 
 export default function Mentions() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const [zoom, setZoom] = useState(false);
 
@@ -19,7 +21,7 @@ export default function Mentions() {
   return (
     <section className="mentions" id="mentions">
       <div className="container">
-        <h2>Menciones</h2>
+        <h2>{t.mentions.title}</h2>
         <div className="mentions__carousel">
           <button className="carousel-btn" onClick={prev} aria-label="Anterior">
             &#8592;

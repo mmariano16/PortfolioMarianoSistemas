@@ -1,7 +1,10 @@
 import experienceImg from '../assets/images/Perfil.jpg';
 import programingVideo from '../assets/images/Programar.mp4';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Experience() {
+  const { t } = useLanguage();
+
   return (
     <section className="experience" id="experience">
       <div className="container">
@@ -12,7 +15,7 @@ export default function Experience() {
             style={{ width: '320px', height: '320px', objectFit: 'cover', borderRadius: '8px' }}
           />
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem' }}>
-            <h2 style={{ margin: 0 }}>Experiencia Laboral</h2>
+            <h2 style={{ margin: 0 }}>{t.experience.title}</h2>
             <video
               src={programingVideo}
               width={400}
@@ -27,80 +30,71 @@ export default function Experience() {
         </div>
         <ul>
           <li>
-            <strong>Ministerio de Salud - Córdoba</strong> <br />
-            <em>Desarrollador de Sistemas y DBA (2000 - Actualidad)</em>
+            <strong>{t.experience.ministerio.title}</strong> <br />
+            <em>{t.experience.ministerio.position}</em>
             <ul>
               {/* SISTEMA DE GESTIÓN DE AMBULANCIAS */}
               <li style={{ marginLeft: "2rem" }}>
-                <strong>Sistema de Gestión de Ambulancias 7x24</strong>
+                <strong>{t.experience.ministerio.ambulances.title}</strong>
                 <p>
                   <em>
-                    Sistema desarrollado y mantenido durante más de 15 años, permitiendo la gestión integral de ambulancias en la provincia de Córdoba, con monitoreo en tiempo real y mapas interactivos.
+                    {t.experience.ministerio.ambulances.description}
                   </em>
                 </p>
                 <ul>
-                  <li>Gestión de flota y disponibilidad de ambulancias 24/7.</li>
-                  <li>Visualización y seguimiento en mapas interactivos.</li>
-                  <li>Optimización de tiempos de respuesta y recursos.</li>
+                  {t.experience.ministerio.ambulances.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
                 </ul>
               </li>
               {/* SISTEMA ITOP */}
               <li style={{ marginLeft: "2rem" }}>
-                <strong>Sistema iTop para Gestión de Tickets</strong>
+                <strong>{t.experience.ministerio.itop.title}</strong>
                 <p>
                   <em>
-                    Implementación, configuración y personalización completa de la plataforma iTop para la gestión de tickets y soporte interno, adaptada a los procesos del Ministerio.
+                    {t.experience.ministerio.itop.description}
                   </em>
                 </p>
                 <ul>
-                  <li>Adaptación a los flujos de trabajo institucionales.</li>
-                  <li>Desarrollo de formularios personalizados para cada departamento.</li>
-                  <li>Programación de alertas automatizadas y workflows.</li>
-                  <li>Creación de reglas de escalamiento y notificaciones automáticas.</li>
-                  <li>Capacitación a usuarios y elaboración de documentación técnica.</li>
-                  <li>
-                    El sistema es utilizado actualmente por múltiples departamentos, optimizando la gestión de tickets y mejorando los tiempos de respuesta.
-                  </li>
-                  <li>
-                    Todo el proyecto fue desarrollado y ejecutado de forma individual, demostrando capacidad para gestionar iniciativas complejas de manera autónoma.
-                  </li>
+                  {t.experience.ministerio.itop.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
                 </ul>
               </li>
               {/* SISTEMA RESIDENCIAS MÉDICAS */}
               <li style={{ marginLeft: "2rem" }}>
-                <strong>Sistema Residencias Médicas</strong>
+                <strong>{t.experience.ministerio.residencias.title}</strong>
                 <p>
                   <em>
-                    Sistemas para Profesionales de la Salud, incluyendo inscripción web, generación aleatoria de exámenes, corrección automatizada y generación de reportes.
+                    {t.experience.ministerio.residencias.description}
                   </em>
                 </p>
                 <ul>
-                  <li>Reconocimiento óptico de caracteres (OCR)</li>
-                  <li>Cruce automatizado con base de datos de inscritos</li>
-                  <li>Publicación de Resultados Portal de la Provincia de Córdoba</li>
+                  {t.experience.ministerio.residencias.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
                 </ul>
               </li>
               <li>
-                <strong>Analista Desarrollador:</strong> Gestión integral del ciclo de desarrollo de sistemas, asumiendo roles de analista, desarrollador, tester, implementador y capacitador, entregando soluciones completas en entornos con recursos limitados.
+                <strong>Analista Desarrollador:</strong> {t.experience.ministerio.analista}
               </li>
             </ul>
           </li>
           <li>
-            <strong>Freelance</strong> <br />
-            <em>Desarrollador Full Stack (2015 - Actualidad)</em>
+            <strong>{t.experience.freelance.title}</strong> <br />
+            <em>{t.experience.freelance.position}</em>
             <ul>
-              <li>Desarrollo de Aplicaciones Web y Windows para clientes privados incluyendo Universidad Católica de Córdoba.</li>
-              <li>Consultoría en arquitectura de software y bases de datos.</li>
+              <li>{t.experience.freelance.description}</li>
+              <li>{t.experience.freelance.consulting}</li>
             </ul>
           </li>
           <li>
-            <strong>Teacher - Institución Cervantes</strong> <br />
-            <em>Carrera Analista de Sistemas / Desarrollo Web</em>
+            <strong>{t.experience.teacher.title}</strong> <br />
+            <em>{t.experience.teacher.position}</em>
             <ul>
-              <li>Base de Datos</li>
-              <li>JavaScript</li>
-              <li>Programación II (C# - MVC)</li>
-              <li>Ejercicio Profesional</li>
+              {t.experience.teacher.subjects.map((subject, index) => (
+                <li key={index}>{subject}</li>
+              ))}
             </ul>
           </li>
         </ul>

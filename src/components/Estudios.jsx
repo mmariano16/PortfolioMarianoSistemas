@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import estudio1 from '../assets/images/estudios1.png';
 import estudio2 from '../assets/images/estudios2.png';
 import estudio3 from '../assets/images/estudios3.png';
@@ -18,6 +19,7 @@ const images = [
 ];
 
 export default function Estudios() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const [zoom, setZoom] = useState(false);
 
@@ -25,9 +27,9 @@ export default function Estudios() {
   const next = () => setCurrent((current + 1) % images.length);
 
   return (
-    <section className="estudios" id="Estudios">
+    <section className="estudios" id="estudios">
       <div className="container">
-        <h2>Estudios</h2>
+        <h2>{t.studies.title}</h2>
         <div className="mentions__carousel">
           <button className="carousel-btn" onClick={prev} aria-label="Anterior">
             &#8592;
